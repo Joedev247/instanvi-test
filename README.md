@@ -121,8 +121,6 @@ src/
 └── utils/              # Utility functions
 ```
 
----
-
 **Project for:** Instanvi  
 **Website:** www.instanvi.com
 
