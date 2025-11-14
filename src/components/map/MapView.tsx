@@ -41,8 +41,7 @@ const MapInitializer: React.FC = () => {
  * Geographic Map View Component
  */
 export const MapView: React.FC = () => {
-  const { geographicPoint, mapZoom, mapCenter, setGeographicPoint, updateMapView } =
-    useMapActions();
+  const { geographicPoint, mapZoom, mapCenter, setGeographicPoint } = useMapActions();
   const { addGeographicMarker } = useMarkerActions();
 
   const handleMapClick = useCallback(

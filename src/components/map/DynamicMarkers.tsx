@@ -7,7 +7,7 @@ import { useMarkerActions } from '@/hooks/useMarkerActions';
  * Renders all geographic markers from state
  */
 export const DynamicMarkers: React.FC = () => {
-  const { markers, selectedMarkerId, selectMarker } = useMarkerActions();
+  const { markers, selectMarker } = useMarkerActions();
 
   const geographicMarkers = markers.filter((marker) => marker.type === 'geographic');
 

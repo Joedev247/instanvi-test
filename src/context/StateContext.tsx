@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import type { ApplicationState, StateAction } from '@/types';
 import { createInitialState } from '@/types';
 import { persistenceService } from '@/services/persistenceService';

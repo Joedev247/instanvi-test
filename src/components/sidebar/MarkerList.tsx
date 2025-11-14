@@ -10,7 +10,8 @@ import './MarkerList.css';
  */
 export const MarkerList: React.FC = () => {
   const { markers, selectedMarkerId, selectMarker, deleteMarker } = useMarkerActions();
-  const { geographicPoint } = useAppState();
+  const { state } = useAppState();
+  const geographicPoint = state.geographicPoint;
   const [deleteConfirm, setDeleteConfirm] = useState<{ isOpen: boolean; markerId: string | null }>({
     isOpen: false,
     markerId: null,

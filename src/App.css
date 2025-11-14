@@ -1,5 +1,17 @@
+@import './styles/fonts.css';
+
+/* Define Raleway font family variable for consistency */
+:root {
+  --raleway-font: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Apply Raleway to all elements by default */
 * {
   box-sizing: border-box;
+  font-family: var(--raleway-font);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
 html,
@@ -8,8 +20,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--raleway-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,16 +30,15 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  font-family: var(--raleway-font);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-/* Smooth transitions for entire application */
-* {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-    transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+/* Keep monospace for code and coordinates */
+code,
+pre,
+.status-value,
+.coordinates {
+  font-family: 'Courier New', 'Consolas', 'Monaco', monospace !important;
 }
 
 /* Exclude specific elements from global transition */

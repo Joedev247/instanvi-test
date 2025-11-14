@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMarkerActions } from '@/hooks/useMarkerActions';
-import { useAppState } from '@/context/StateContext';
 import './MarkerForm.css';
 
 /**

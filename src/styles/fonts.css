@@ -1,0 +1,16 @@
+/**
+ * Raleway Font Face Declaration
+ */
+@font-face {
+  font-family: 'Raleway';
+  src: url('/raleway-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**
+ * For weights not available, we'll use system fonts as fallback
+ * The browser will automatically use the closest available weight
+ */
+

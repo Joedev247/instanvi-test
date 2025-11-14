@@ -10,7 +10,6 @@ import './FloorPlanView.css';
  */
 export const FloorPlanView: React.FC = () => {
   const { state } = useAppState();
-  const geographicPoint = state.geographicPoint;
   const { addFloorPlanMarker } = useMarkerActions();
   const canvasRef = useRef<HTMLDivElement>(null);
   const [floorPlanImage, setFloorPlanImage] = useState<string | null>(null);
