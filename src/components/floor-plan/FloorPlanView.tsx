@@ -73,20 +73,16 @@ export const FloorPlanView: React.FC = () => {
         ) : (
           <>
             <svg width="100%" height="100%" viewBox="0 0 800 600">
-              <rect width="800" height="600" fill="#f5f5f5" stroke="#ddd" strokeWidth="2" />
-              <text x="400" y="280" textAnchor="middle" fill="#999" fontSize="24" fontFamily="Arial">
+              <rect width="800" height="600" fill="#f5f5f5" />
+              <text x="400" y="280" textAnchor="middle" fill="#999" fontSize="22" fontFamily="Raleway" fontWeight="400">
                 Floor Plan Image
               </text>
-              <text x="400" y="310" textAnchor="middle" fill="#999" fontSize="16" fontFamily="Arial">
+              <text x="400" y="310" textAnchor="middle" fill="#999" fontSize="15" fontFamily="Raleway" fontWeight="400">
                 Click to place markers
               </text>
-              <text x="400" y="340" textAnchor="middle" fill="#666" fontSize="14" fontFamily="Arial">
+              <text x="400" y="340" textAnchor="middle" fill="#666" fontSize="13" fontFamily="Raleway" fontWeight="400">
                 Or upload your own floor plan image
               </text>
-              {/* Draw some sample room outlines */}
-              <rect x="100" y="100" width="200" height="150" fill="none" stroke="#ccc" strokeWidth="2" />
-              <rect x="350" y="100" width="200" height="150" fill="none" stroke="#ccc" strokeWidth="2" />
-              <rect x="500" y="300" width="200" height="200" fill="none" stroke="#ccc" strokeWidth="2" />
             </svg>
             <label className="upload-btn">
               Upload Floor Plan Image

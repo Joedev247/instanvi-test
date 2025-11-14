@@ -21,6 +21,8 @@ body {
   width: 100%;
   height: 100%;
   font-family: var(--raleway-font);
+  font-size: 14px;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
