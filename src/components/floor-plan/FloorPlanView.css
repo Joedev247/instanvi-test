@@ -1,0 +1,236 @@
+.floor-plan-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+  animation: fadeInScale 0.5s ease-out;
+}
+
+.floor-plan-disabled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 10;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.floor-plan-disabled p {
+  padding: 20px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+  text-align: center;
+  max-width: 400px;
+}
+
+.floor-plan-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.floor-plan-canvas.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.floor-plan-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.placeholder-content {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.upload-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.upload-btn:hover {
+  background: #0056b3;
+}
+
+.image-error {
+  text-align: center;
+  color: #dc3545;
+  padding: 20px;
+}
+
+.image-error p {
+  margin-bottom: 16px;
+}
+
+.floor-plan-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f5f5f5;
+}
+
+.image-upload-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+
+.upload-btn-small {
+  padding: 6px 12px;
+  background: rgba(0, 123, 255, 0.9);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.upload-btn-small:hover {
+  background: rgba(0, 86, 179, 0.9);
+}
+
+.remove-image-btn {
+  padding: 6px 12px;
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.remove-image-btn:hover {
+  background: rgba(200, 35, 51, 0.9);
+}
+
+.floor-plan-marker {
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  animation: markerAppear 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes markerAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.marker-pin {
+  width: 20px;
+  height: 20px;
+  background: #ff4444;
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.floor-plan-marker.selected .marker-pin {
+  background: #44ff44;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 0 0 4px rgba(68, 255, 68, 0.3);
+}
+
+.marker-popup {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.marker-popup strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.marker-popup p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.marker-popup small {
+  display: block;
+  color: #999;
+  font-size: 11px;
+  margin-top: 4px;
+}
+

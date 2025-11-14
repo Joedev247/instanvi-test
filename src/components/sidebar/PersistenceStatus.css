@@ -1,0 +1,60 @@
+.persistence-status {
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.persistence-status h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.status-item:last-child {
+  margin-bottom: 0;
+}
+
+.status-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.status-value {
+  color: #333;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.status-value.available {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-value.unavailable {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.persistence-status {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

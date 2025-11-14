@@ -1,0 +1,140 @@
+.marker-list {
+  margin-top: 24px;
+}
+
+.marker-list h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.marker-section {
+  margin-bottom: 20px;
+}
+
+.marker-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+.marker-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.marker-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInLeft 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+.marker-list li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.marker-list li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.marker-list li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.marker-list li:nth-child(n+4) {
+  animation-delay: 0.2s;
+}
+
+.marker-list li:hover {
+  background: #e9ecef;
+  border-color: #007bff;
+}
+
+.marker-list li.selected {
+  background: #e7f3ff;
+  border-color: #007bff;
+  border-width: 2px;
+}
+
+.marker-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marker-label {
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.marker-list small {
+  display: block;
+  margin-top: 4px;
+  color: #666;
+  font-size: 12px;
+}
+
+.info-message {
+  padding: 12px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.empty-state {
+  padding: 24px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
